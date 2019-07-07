@@ -44,7 +44,7 @@ insert into `cross_db_links` (
         '{"url": "http://bioinfo.life.hust.edu.cn/AnimalTFDB/#!/tf_summary?family=CBF",
         "anno" : "TF family contains 99 member genes",
         "dbtype" : "AnimalTFDB3.0"}'
-    )
+    );
 ```
 
 show the newly inserted data:
@@ -57,8 +57,10 @@ select * from `cross_db_links`;
 then it can be displayed as one of the following ways:
 * external link:
 ![](/images/02_display_1.png)
+see here for example: https://gmrepo.humangut.info/phenotypes/D001714/33039.
 * popup panel:
 ![](/images/03_display_2.png)
+see here for example: https://gmrepo.humangut.info/phenotypes/D001714.
 
 Of course there can be two or more external links associated with a keyword, e.g.:
 ![](/images/04_display_3.png)
