@@ -19,17 +19,32 @@ CREATE TABLE `cross_db_links` (
 );
 ```
 
-2. insert some data:
+2. insert two rows of data:
 ```sql
-insert into `cross_db_links` ( `search_key`, `key_type`, `source_db`, `attributes` )
-    values( '10090', "ncbi taxonomy id", "MVP",
+insert into `cross_db_links` (
+    `search_key`,
+    `key_type`,
+    `source_db`,
+    `attributes` )
+
+    values
+    (
+        '10090',
+        "ncbi taxonomy id",
+        "MVP",
         '{"url":"http://mvp.medgenius.info/microbes/75/Caulobacter",
         "dbtype":"MVP",
-        "anno":"assoc w/ 5 phage clusters"}'),
-        ( 'CBF', 'TF family name', 'AnimalTFDB3.0',
+        "anno":"assoc w/ 5 phage clusters"}'
+    ),
+
+    (
+        'CBF',
+        'TF family name',
+        'AnimalTFDB3.0',
         '{"url": "http://bioinfo.life.hust.edu.cn/AnimalTFDB/#!/tf_summary?family=CBF",
         "anno" : "TF family contains 99 member genes",
-        "dbtype" : "AnimalTFDB3.0"}' )
+        "dbtype" : "AnimalTFDB3.0"}'
+    )
 ```
 
 show the newly inserted data:
